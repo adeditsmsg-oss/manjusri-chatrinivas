@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
 import { X, Maximize2 } from 'lucide-react';
 
 export default function Gallery() {
@@ -37,11 +36,10 @@ export default function Gallery() {
               onClick={() => setActiveImg(img.url)}
               className={`relative rounded-[2.5rem] overflow-hidden shadow-md group border border-[#748E7A]/25 cursor-pointer bg-[#FAF8F5] ${img.ratio}`}
             >
-              <Image
+              <img
                 src={img.url}
                 alt={img.title}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-750"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-750"
               />
               {/* Overlay styling */}
               <div className="absolute inset-0 bg-[#1B4332]/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-whitePure text-left">
@@ -66,11 +64,10 @@ export default function Gallery() {
               <X size={24} />
             </button>
             <div className="relative w-full max-w-4xl h-[70vh] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
+              <img
                 src={activeImg}
                 alt="Enlarged campus view"
-                fill
-                className="object-contain"
+                className="w-full h-full object-contain"
               />
             </div>
           </div>

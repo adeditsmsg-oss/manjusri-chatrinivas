@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 
 export default function About() {
   return (
@@ -48,11 +47,10 @@ export default function About() {
 
         {/* Dynamic Image Collage (Editorial-style Wide Strip) */}
         <div className="relative w-full h-[220px] sm:h-[320px] rounded-[2.5rem] overflow-hidden shadow-xl mt-12">
-          <Image
+          <img
             src="/manjusri-chatrinivas/images/lobby.jpg"
             alt="Interior clean corridor"
-            fill
-            className="object-cover"
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-[#1B4332]/10" />
         </div>

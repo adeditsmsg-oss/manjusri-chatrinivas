@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import { TulipLeft, TulipRight } from './FlowerAccent';
 
 export default function Hero() {
@@ -60,12 +59,10 @@ export default function Hero() {
         <div className="lg:col-span-6 flex justify-center lg:justify-end">
           {/* Main building display frame */}
           <div className="w-full h-full rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-[#FFFDF9] relative transform hover:rotate-0 transition-transform duration-500">
-            <Image
+            <img
               src="/manjusri-chatrinivas/images/building.jpg"
               alt="Manjusri Chatrinivas Gated Property"
-              fill
-              priority
-              className="object-cover"
+              className="w-full h-full object-cover"
             />
             
             {/* Visual Overlay */}
@@ -81,11 +78,10 @@ export default function Hero() {
           {/* Overlapping cozy room badge at the bottom-left */}
           <div className="absolute -bottom-6 -left-10 bg-[#FFFDF9] p-3.5 rounded-2xl shadow-xl border border-[#E5E0D8] flex items-center space-x-3.5 max-w-[200px] transform rotate-3 hover:scale-105 transition-transform duration-300">
             <div className="w-12 h-12 rounded-xl overflow-hidden relative flex-shrink-0">
-              <Image
+              <img
                 src="/manjusri-chatrinivas/images/bedroom_orange.jpg"
                 alt="Premium Interiors"
-                fill
-                className="object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>

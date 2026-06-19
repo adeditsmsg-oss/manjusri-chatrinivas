@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import { Star } from 'lucide-react';
 
 export default function Services() {
@@ -69,11 +68,10 @@ export default function Services() {
               {/* Image box */}
               <div className={`lg:col-span-6 w-full ${room.alignLeft ? '' : 'lg:order-last'}`}>
                 <div className="relative aspect-[16/10] sm:aspect-[16/9] rounded-[2.5rem] overflow-hidden shadow-lg border-4 border-[#FFFDF9]">
-                  <Image
+                  <img
                     src={room.image}
                     alt={room.name}
-                    fill
-                    className="object-cover hover:scale-[1.02] transition-transform duration-700"
+                    className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-700"
                   />
                 </div>
               </div>
