@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primaryGreen: #1B4332;   /* Deep Forest Green */
+  --color-sageGreen: #748E7A;      /* Sage Green */
+  --color-accentOrange: #C26D55;   /* Terracotta */
+  --color-accentRose: #C58B97;     /* Warm Rose */
+  --color-accentCoral: #F0A699;    /* Coral Pink */
+  --color-creamBg: #FAF8F5;        /* Warm Ivory / Soft Cream */
+  --color-creamCard: #FFFDF9;      /* Alabaster/Cream card */
+  --color-charcoalText: #1C1917;   /* Charcoal Black */
+  --color-darkBrown: #382F2D;      /* Dark Brown text */
+  --color-whitePure: #FFFFFF;
+  --color-greyBorder: #E5E0D8;
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-bengali: 'Hind Siliguri', sans-serif;
+}
+
+:root {
+  --background: #FAF8F5;
+  --foreground: #1C1917;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: #1B4332;
+}
+
+/* Custom premium scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #E76F51;
+  border: 2px solid #FAF8F3;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D95438;
+}
+
+/* Soft glassmorphism panel */
+.glass-capsule {
+  background: rgba(250, 248, 243, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(60, 46, 43, 0.08);
+}
