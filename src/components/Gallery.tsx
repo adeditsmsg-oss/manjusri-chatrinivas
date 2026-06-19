@@ -2,114 +2,40 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { X, ZoomIn } from 'lucide-react';
+import { X, Maximize2 } from 'lucide-react';
 
 export default function Gallery() {
   const images = [
-    {
-      title: 'Ladies Mess Building Exterior',
-      desc: 'The daylight front view of the Manjusri Chatrinivas property in Ramayanpara.',
-      url: '/images/building.jpg',
-      category: 'building'
-    },
-    {
-      title: 'Orange Bed Room (Single Setup)',
-      desc: 'Bright single room configuration with marble flooring, window, and cozy setup.',
-      url: '/images/bedroom_orange.jpg',
-      category: 'rooms'
-    },
-    {
-      title: 'Blue Bed Room (2 Sharing Setup)',
-      desc: 'Clean study room with turquoise and lavender accent walls, marble floor, and windows.',
-      url: '/images/bedroom_blue.jpg',
-      category: 'rooms'
-    },
-    {
-      title: 'Yellow Bed Room (3 Sharing Setup)',
-      desc: 'Balanced double study room config with solid metal beds and study lighting.',
-      url: '/images/bedroom_yellow.jpg',
-      category: 'rooms'
-    },
-    {
-      title: 'Green Bed Room (4 Sharing Setup)',
-      desc: 'Highly economical study space with high ceilings and spacious layouts.',
-      url: '/images/bedroom_green.jpg',
-      category: 'rooms'
-    },
-    {
-      title: 'Cozy Balcony View',
-      desc: 'Scenic balcony overlooking quiet, green residential fields of Ramayanpara.',
-      url: '/images/balcony.jpg',
-      category: 'amenities'
-    },
-    {
-      title: 'Hygienic Modern Washroom',
-      desc: 'Sanitized Western-style bathroom featuring light-blue tiles and premium shower.',
-      url: '/images/bathroom.jpg',
-      category: 'amenities'
-    },
-    {
-      title: 'Hygienic Kitchen Space',
-      desc: 'Sanitized kitchen setup with granite countertops, exhaust, and clean utensils.',
-      url: '/images/kitchen.jpg',
-      category: 'food'
-    },
-    {
-      title: 'Dining Room Lobby',
-      desc: 'Spacious dining setup serving healthy Bengali home-cooked meals daily.',
-      url: '/images/dining.jpg',
-      category: 'food'
-    },
-    {
-      title: 'Sanitized Common Lobby',
-      desc: 'Common passage area near the basin with safe ventilation and locks.',
-      url: '/images/lobby.jpg',
-      category: 'amenities'
-    }
+    { title: 'The Gated Campus', url: '/images/building.jpg', ratio: 'col-span-12 md:col-span-8 aspect-video' },
+    { title: 'Orange Room Single Config', url: '/images/bedroom_orange.jpg', ratio: 'col-span-6 md:col-span-4 aspect-square' },
+    { title: 'Western Sanitation Setup', url: '/images/bathroom.jpg', ratio: 'col-span-6 md:col-span-4 aspect-[3/4]' },
+    { title: 'Homely Dining Hall', url: '/images/dining.jpg', ratio: 'col-span-12 md:col-span-8 aspect-video' },
+    { title: 'Fresh Sanitized Kitchen', url: '/images/kitchen.jpg', ratio: 'col-span-12 md:col-span-6 aspect-video' },
+    { title: 'Common Balcony Sight', url: '/images/balcony.jpg', ratio: 'col-span-12 md:col-span-6 aspect-video' }
   ];
 
-  const [filter, setFilter] = useState('all');
-  const [selectedImg, setSelectedImg] = useState<string | null>(null);
-
-  const filteredImages = filter === 'all' ? images : images.filter(img => img.category === filter);
+  const [activeImg, setActiveImg] = useState<string | null>(null);
 
   return (
-    <section id="gallery" className="py-24 bg-creamBg relative overflow-hidden">
+    <section id="gallery" className="py-24 bg-[#FFFDF9] text-[#1C1917] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         
         {/* Title */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-sm font-bold uppercase tracking-widest text-accentRose font-bengali block">ছবি গ্যালারি (Gallery)</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-primaryGreen mt-2 font-serif">Explore Manjusri Chatrinivas</h2>
-          <p className="text-darkBrown/80 mt-4 leading-relaxed text-sm sm:text-base font-sans">
-            Take a visual tour of our building exterior, bedrooms, kitchen, common balcony, and modern washroom facilities.
+        <div className="text-left max-w-2xl mb-16 space-y-3">
+          <span className="text-[10px] uppercase font-bold tracking-widest text-[#C26D55] font-sans block">02 / Portraits</span>
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-[#1B4332] font-serif leading-none">The Visual Grid</h2>
+          <p className="text-xs text-[#382F2D]/80 font-sans leading-relaxed pt-1">
+            An art-directed photography collection showing actual campus details and rooms.
           </p>
         </div>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-2.5 mb-12">
-          {['all', 'rooms', 'food', 'amenities', 'building'].map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setFilter(cat)}
-              className={`px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
-                filter === cat
-                  ? 'bg-primaryGreen text-whitePure shadow-md'
-                  : 'bg-whitePure text-charcoalText hover:bg-creamBg border border-greyBorder/50'
-              }`}
-            >
-              {cat === 'all' ? 'All Photos' : cat === 'rooms' ? 'Bedrooms' : cat === 'food' ? 'Kitchen & Dining' : cat === 'amenities' ? 'Washrooms & Balcony' : 'Building'}
-            </button>
-          ))}
-        </div>
-
-        {/* Grid Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredImages.map((img, index) => (
+        {/* Asymmetrical Layout Collage Grid */}
+        <div className="grid grid-cols-12 gap-6 items-stretch">
+          {images.map((img, idx) => (
             <div
-              key={index}
-              onClick={() => setSelectedImg(img.url)}
-              className="relative group rounded-[2rem] overflow-hidden shadow-md bg-whitePure border border-greyBorder/40 aspect-video sm:aspect-square transform hover:scale-[1.01] transition-all duration-500 cursor-pointer"
+              key={idx}
+              onClick={() => setActiveImg(img.url)}
+              className={`relative rounded-[2.5rem] overflow-hidden shadow-md group border border-[#748E7A]/25 cursor-pointer bg-[#FAF8F5] ${img.ratio}`}
             >
               <Image
                 src={img.url}
@@ -117,34 +43,32 @@ export default function Gallery() {
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-750"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primaryGreen/95 via-primaryGreen/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-whitePure text-left">
-                <div className="absolute top-4 right-4 p-2 bg-whitePure/15 backdrop-blur-md rounded-full text-whitePure">
-                  <ZoomIn size={16} />
+              {/* Overlay styling */}
+              <div className="absolute inset-0 bg-[#1B4332]/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 text-whitePure text-left">
+                <div className="absolute top-6 right-6 p-2 bg-whitePure/15 rounded-full text-whitePure">
+                  <Maximize2 size={14} />
                 </div>
-                <span className="text-[10px] uppercase tracking-widest text-accentCoral font-bold mb-1">
-                  {img.category === 'rooms' ? 'Rooms & Comfort' : img.category === 'food' ? 'Kitchen & Dining' : 'General Campus'}
-                </span>
-                <h4 className="text-base sm:text-lg font-bold font-serif">{img.title}</h4>
-                <p className="text-xs text-whitePure/80 mt-1 leading-relaxed font-sans">{img.desc}</p>
+                <span className="text-[9px] uppercase tracking-widest text-[#F0A699] font-bold block mb-1">Manjusri Chatrinivas</span>
+                <h4 className="text-lg font-bold font-serif">{img.title}</h4>
               </div>
             </div>
           ))}
         </div>
 
         {/* Lightbox Modal */}
-        {selectedImg && (
-          <div className="fixed inset-0 z-50 bg-charcoalText/90 flex items-center justify-center p-4 backdrop-blur-md">
+        {activeImg && (
+          <div className="fixed inset-0 z-50 bg-[#1C1917]/95 flex items-center justify-center p-4 backdrop-blur-md">
             <button
-              onClick={() => setSelectedImg(null)}
-              className="absolute top-6 right-6 text-whitePure hover:text-accentOrange p-2 bg-whitePure/10 rounded-full transition-colors"
-              aria-label="Close image lightbox"
+              onClick={() => setActiveImg(null)}
+              className="absolute top-6 right-6 text-whitePure hover:text-[#C26D55] p-2 bg-whitePure/10 rounded-full transition-colors"
+              aria-label="Close photo"
             >
               <X size={24} />
             </button>
             <div className="relative w-full max-w-4xl h-[70vh] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src={selectedImg}
-                alt="Enlarged view"
+                src={activeImg}
+                alt="Enlarged campus view"
                 fill
                 className="object-contain"
               />

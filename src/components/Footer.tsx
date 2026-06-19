@@ -1,75 +1,65 @@
 'use client';
 
 import React from 'react';
-import { Phone, MapPin, Heart, MessageSquare } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-primaryGreen text-whitePure pt-16 pb-8 border-t border-accentRose/20 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-5 floral-backdrop" />
-
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10 grid grid-cols-1 md:grid-cols-12 gap-12 text-left">
+    <footer className="bg-[#1B4332] text-whitePure pt-20 pb-8 relative overflow-hidden border-t border-[#C58B97]/20">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10 grid grid-cols-1 md:grid-cols-12 gap-12 text-left font-sans text-xs">
         
-        {/* Description & Branding */}
-        <div className="md:col-span-5 space-y-4">
+        {/* Imprint Column 1: Publisher Stamp */}
+        <div className="md:col-span-5 space-y-4 text-left">
           <div className="flex items-center space-x-3">
-            <div className="w-9 h-9 rounded-full bg-accentRose flex items-center justify-center text-whitePure text-base font-serif font-extrabold shadow-md">
+            <div className="w-8 h-8 rounded-full bg-[#C58B97] flex items-center justify-center text-whitePure text-sm font-serif font-black shadow-xs">
               ম
             </div>
             <div>
-              <h3 className="font-bengali text-base sm:text-lg font-bold leading-none">মঞ্জুশ্রী ছাত্রীনিবাস</h3>
-              <p className="text-[9px] text-accentCoral uppercase tracking-widest font-bold mt-1">Manjusri Chatrinivas</p>
+              <h3 className="font-bengali text-sm sm:text-base font-bold leading-none">মঞ্জুশ্রী ছাত্রীনিবাস</h3>
+              <p className="text-[7.5px] text-[#F0A699] uppercase tracking-widest font-bold mt-1">Manjusri Chatrinivas</p>
             </div>
           </div>
           
-          <p className="text-whitePure/75 text-xs sm:text-sm leading-relaxed max-w-sm font-sans">
-            A premium ladies hostel, girls PG, and student accommodation near Bidla Traffic Point, Tantigeria, Midnapore. Providing safe, modern, and high-quality spaces.
+          <p className="text-whitePure/70 text-xs leading-relaxed max-w-sm">
+            Designed as a high-end ladies co-living environment in Tantigeria, Midnapore. Providing safety, comfort, and nutritious food plans for student boarders since launch.
           </p>
 
-          <p className="text-[10px] text-whitePure/45 font-sans">
-            © {new Date().getFullYear()} Manjusri Chatrinivas (Ladies Mess). All Rights Reserved.
+          <p className="text-[9px] text-whitePure/45">
+            © {new Date().getFullYear()} Manjusri Chatrinivas. Imprint and catalog details.
           </p>
         </div>
 
-        {/* Quick Links */}
+        {/* Imprint Column 2: Index list */}
         <div className="md:col-span-3 space-y-4">
-          <h4 className="font-bold text-xs uppercase tracking-widest text-accentCoral">Navigation</h4>
-          <ul className="space-y-2 text-xs sm:text-sm text-whitePure/75 font-sans">
-            <li><a href="#home" className="hover:text-accentCoral transition-colors">Home</a></li>
-            <li><a href="#about" className="hover:text-accentCoral transition-colors">About Us</a></li>
-            <li><a href="#rooms" className="hover:text-accentCoral transition-colors">Room Categories</a></li>
-            <li><a href="#pricing" className="hover:text-accentCoral transition-colors">Pricing & Plans</a></li>
-            <li><a href="#why-us" className="hover:text-accentCoral transition-colors">Amenities</a></li>
-            <li><a href="#gallery" className="hover:text-accentCoral transition-colors">Gallery</a></li>
+          <h4 className="font-bold text-[10px] uppercase tracking-widest text-[#F0A699]">Index</h4>
+          <ul className="space-y-2.5 text-whitePure/70">
+            <li><a href="#home" className="hover:text-[#F0A699] transition-colors">01 / Cover</a></li>
+            <li><a href="#philosophy" className="hover:text-[#F0A699] transition-colors">02 / Philosophy</a></li>
+            <li><a href="#gallery" className="hover:text-[#F0A699] transition-colors">03 / Portraits</a></li>
+            <li><a href="#residence" className="hover:text-[#F0A699] transition-colors">04 / Residence</a></li>
+            <li><a href="#pricing" className="hover:text-[#F0A699] transition-colors">05 / Investment</a></li>
           </ul>
         </div>
 
-        {/* Contact details */}
+        {/* Imprint Column 3: Catalog Stamp */}
         <div className="md:col-span-4 space-y-4">
-          <h4 className="font-bold text-xs uppercase tracking-widest text-accentCoral">Contact Details</h4>
-          <ul className="space-y-3 text-xs sm:text-sm text-whitePure/75 font-sans">
-            <li className="flex items-start space-x-2">
-              <MapPin size={16} className="text-accentCoral mt-0.5 flex-shrink-0" />
-              <span>Ramayanpara, Near Bidla Traffic Point, Tantigeria, Midnapore, West Bengal - 721102</span>
+          <h4 className="font-bold text-[10px] uppercase tracking-widest text-[#F0A699]">Catalog Stamps</h4>
+          <ul className="space-y-3.5 text-whitePure/70">
+            <li>
+              <span className="text-[9px] uppercase font-bold text-[#F0A699] block">Address</span>
+              <span className="block mt-0.5">Ramayanpara, Tantigeria, Midnapore, WB 721102</span>
             </li>
-            <li className="flex items-center space-x-2">
-              <Phone size={16} className="text-accentCoral flex-shrink-0" />
-              <span>Call: +91 80168 01695, +91 91268 36422</span>
-            </li>
-            <li className="flex items-center space-x-2">
-              <MessageSquare size={16} className="text-green-500 flex-shrink-0" />
-              <span>WhatsApp Support: +91 80168 01695</span>
+            <li>
+              <span className="text-[9px] uppercase font-bold text-[#F0A699] block">Enquiry Desk</span>
+              <span className="block mt-0.5">Call: +91 80168 01695</span>
             </li>
           </ul>
         </div>
 
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 mt-12 pt-8 border-t border-whitePure/10 flex flex-col sm:flex-row items-center justify-between text-[10px] text-whitePure/40 gap-4 font-sans">
-        <p>SEO optimized for: Ladies Hostel in Midnapore, Girls PG Near Bidla Traffic Point, Student Accommodation.</p>
-        <p className="flex items-center">
-          Created with <Heart size={12} className="text-accentRose mx-1 fill-accentRose" /> for Manjusri Chatrinivas.
-        </p>
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 mt-12 pt-8 border-t border-whitePure/10 flex flex-col sm:flex-row items-center justify-between text-[9px] text-whitePure/45 gap-4">
+        <p>SEO optimized namespace for girls PG, student rooms, and ladies mess in Midnapore.</p>
+        <p>Designed by Senior Creative Direction.</p>
       </div>
     </footer>
   );

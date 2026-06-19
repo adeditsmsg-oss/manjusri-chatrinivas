@@ -6,8 +6,6 @@ import Services from '../components/Services';
 import Pricing from '../components/Pricing';
 import WhyChooseUs from '../components/WhyChooseUs';
 import Safety from '../components/Safety';
-import Stats from '../components/Stats';
-import Process from '../components/Process';
 import Gallery from '../components/Gallery';
 import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
@@ -17,20 +15,18 @@ import { Phone, MessageSquare } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-creamBg text-charcoalText font-sans relative">
+    <div className="min-h-screen bg-[#FAF8F5] text-[#1C1917] font-sans relative">
       {/* Navigation */}
       <Navbar />
 
-      {/* Main Sections */}
+      {/* Narrative Editorial Sections */}
       <Hero />
       <About />
-      <Services />
-      <Pricing />
-      <WhyChooseUs />
-      <Safety />
-      <Stats />
-      <Process />
       <Gallery />
+      <Services />
+      <WhyChooseUs />
+      <Pricing />
+      <Safety />
       <Testimonials />
       <FAQ />
       <Contact />
@@ -38,8 +34,6 @@ export default function Home() {
       {/* Footer */}
       <Footer />
 
-      {/* Sticky Floating Widgets */}
-      
       {/* WhatsApp Chat Floating Button */}
       <a
         href="https://wa.me/918016801695?text=Hi!%20I%20am%20interested%20in%20Manjusri%20Chatrinivas.%20Please%20share%20room%20availability."
@@ -55,14 +49,14 @@ export default function Home() {
       <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden glass-capsule py-3 px-4 shadow-2xl flex gap-4 mx-4 mb-4 rounded-2xl">
         <a
           href="tel:+918016801695"
-          className="flex-1 flex items-center justify-center space-x-2 bg-primaryGreen text-whitePure py-3 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-accentOrange transition-colors"
+          className="flex-1 flex items-center justify-center space-x-2 bg-[#1B4332] text-whitePure py-3 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#C26D55] transition-colors"
         >
           <Phone size={14} />
           <span>Call Warden</span>
         </a>
         <a
           href="#contact"
-          className="flex-1 flex items-center justify-center bg-accentOrange text-whitePure py-3 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-primaryGreen transition-colors"
+          className="flex-1 flex items-center justify-center bg-[#C26D55] text-whitePure py-3 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-[#1B4332] transition-colors"
         >
           <span>Book Now</span>
         </a>

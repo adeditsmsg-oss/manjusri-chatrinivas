@@ -1,59 +1,50 @@
 'use client';
 
 import React from 'react';
-import { Wifi, Droplet, BookOpen, Lightbulb, Sparkles, Thermometer, Bike, ChefHat, ShieldCheck, Zap, Bath, Heart } from 'lucide-react';
-import { TulipLeft, TulipRight } from './FlowerAccent';
 
 export default function WhyChooseUs() {
-  const facilities = [
-    { name: 'Free High-Speed WiFi', icon: Wifi, desc: 'Stay connected for studies, work, and social needs.' },
-    { name: 'Purified Water', icon: Droplet, desc: 'RO filtered clean and safe drinking water.' },
-    { name: 'Submersible Water', icon: Droplet, desc: 'Uninterrupted 24/7 water supply throughout the day.' },
-    { name: 'Individual Bookshelf', icon: BookOpen, desc: 'Keep your academic and study materials neatly organized.' },
-    { name: 'Emergency Backup Light', icon: Lightbulb, desc: 'Immediate backup lights during power failures.' },
-    { name: 'House Maid Services', icon: Sparkles, desc: 'Daily cleaning of corridors, washrooms, and common spaces.' },
-    { name: 'Geyser Facility', icon: Thermometer, desc: 'Hot water availability for refreshing baths in winter.' },
-    { name: 'Cycle Stand Parking', icon: Bike, desc: 'Safe locked parking space for your bicycles.' },
-    { name: 'Separate Kitchen Access', icon: ChefHat, desc: 'Independent cooking facility option for boarders.' },
-    { name: 'Separate Washroom', icon: Bath, desc: 'Modern hygienic toilet fixtures and setup.' },
-    { name: 'Outside CCTV Safety', icon: ShieldCheck, desc: 'Security coverage monitoring the gates & boundary.' },
-    { name: 'Flexible Meal Plans', icon: ChefHat, desc: 'Customizable dining subscriptions for healthy Bengali meals.' },
-    { name: 'Electric Meter System', icon: Zap, desc: 'Pay exactly what you consume under flexible plans.' },
-    { name: 'Clean Environment', icon: Sparkles, desc: 'Tidy, fresh surroundings for peaceful living.' },
-    { name: 'Safe Girls PG Community', icon: Heart, desc: 'Trustworthy community of college boarders & workers.' }
+  const amenities = [
+    { num: '01', name: 'Free High-Speed WiFi', detail: 'Stay connected for studies, online classes, and daily work without limits.' },
+    { num: '02', name: 'RO Purified & Submersible Water', detail: 'Consistent 24/7 water supply alongside clean drinking water.' },
+    { num: '03', name: 'Emergency Backup Lights', detail: 'Instant backup lights installed in rooms and lobbies during power failures.' },
+    { num: '04', name: 'Cycle Stand Parking', detail: 'Dedicated locked area inside the gates to park your bicycles safely.' },
+    { num: '05', name: 'House Maid & Daily Sanitization', detail: 'Daily sweeping, corridor cleaning, and thorough sanitization of all washrooms.' },
+    { num: '06', name: 'Separate Kitchen Access', detail: 'Independent cooking setup and utensils available under the Flexible Plan.' },
+    { num: '07', name: 'Outside CCTV Safety', detail: 'Entrance paths, gates, and boundary perimeters monitored by 24/7 video recording.' },
+    { num: '08', name: 'Electric Meter System', detail: 'Individual sub-meters allow flexible plan boarders to pay exactly what they consume.' }
   ];
 
   return (
-    <section id="why-us" className="py-24 bg-creamBg relative overflow-hidden">
-      
-      {/* Decorative floral elements */}
-      <TulipLeft />
-      <TulipRight />
-
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
+    <section id="amenities" className="py-24 bg-[#FFFDF9] text-[#1C1917] relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
         
-        {/* Title */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-sm font-bold uppercase tracking-widest text-accentRose font-bengali block">সুযোগ-সুবিধা (Facilities & Amenities)</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-primaryGreen mt-2 font-serif">Premium Amenities For Modern Co-Living</h2>
-          <p className="text-darkBrown/80 mt-4 leading-relaxed text-sm sm:text-base font-sans">
-            We provide everything needed for a safe, comfortable, and independent student/working-woman lifestyle in Midnapore.
-          </p>
+        {/* Title split layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-20">
+          <div className="lg:col-span-5 text-left space-y-3">
+            <span className="text-[10px] uppercase font-bold tracking-widest text-[#C26D55] font-sans block">04 / Amenities</span>
+            <h2 className="text-4xl sm:text-5xl font-extrabold text-[#1B4332] font-serif leading-none">Living Made Elegant</h2>
+          </div>
+          <div className="lg:col-span-7 text-left">
+            <p className="text-xs sm:text-sm text-[#382F2D]/85 leading-relaxed font-sans max-w-xl">
+              We focus on the essential comforts that enable a worry-free study environment. Every facility is curated to deliver safety, privacy, and absolute convenience.
+            </p>
+          </div>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
-          {facilities.map((item, index) => (
-            <div
-              key={index}
-              className="bg-whitePure p-5 rounded-2xl border border-greyBorder/40 shadow-xs hover:border-accentOrange hover:shadow-md transition-all duration-300 text-left flex flex-col justify-between"
-            >
-              <div className="space-y-3">
-                <div className="p-2.5 bg-primaryGreen/5 text-primaryGreen rounded-xl w-fit">
-                  <item.icon size={20} strokeWidth={2} />
-                </div>
-                <h3 className="font-bold text-primaryGreen text-xs font-serif">{item.name}</h3>
-                <p className="text-[10px] text-charcoalText/75 leading-relaxed font-sans">{item.desc}</p>
+        {/* Minimalist Typography List with inline numbers */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-2">
+          {amenities.map((item, idx) => (
+            <div key={idx} className="luxury-num-item py-6 flex items-start space-x-6 text-left group">
+              <span className="text-xl font-bold font-serif text-[#C26D55]/60 group-hover:text-[#C26D55] transition-colors pt-0.5">
+                {item.num}
+              </span>
+              <div className="space-y-1">
+                <h3 className="text-sm font-bold text-[#1B4332] font-serif group-hover:text-[#C26D55] transition-colors">
+                  {item.name}
+                </h3>
+                <p className="text-xs text-[#382F2D]/80 leading-relaxed font-sans">
+                  {item.detail}
+                </p>
               </div>
             </div>
           ))}

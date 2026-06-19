@@ -1,148 +1,155 @@
 'use client';
 
 import React from 'react';
-import { Check, Info } from 'lucide-react';
+import { CircleCheck, Sparkles, AlertCircle } from 'lucide-react';
 
 export default function Pricing() {
-  const allInclusivePlans = [
-    { sharing: 'Single Room', price: '4,299' },
-    { sharing: '2 Sharing Room', price: '3,499' },
-    { sharing: '3 Sharing Room', price: '3,299' },
-    { sharing: '4 Sharing Room', price: '2,799' }
+  const allInclusive = [
+    { name: 'Single Room', price: '4,299' },
+    { name: '2 Sharing Room', price: '3,499' },
+    { name: '3 Sharing Room', price: '3,299' },
+    { name: '4 Sharing Room', price: '2,799' }
   ];
 
-  const flexiblePlans = [
-    { sharing: 'Single Bed', price: '2,299' },
-    { sharing: '2 Sharing Bed', price: '1,599' },
-    { sharing: '3 Sharing Bed', price: '1,399' },
-    { sharing: '4 Sharing Bed', price: '899' }
+  const flexible = [
+    { name: 'Single Bed Space', price: '2,299' },
+    { name: '2 Sharing Space', price: '1,599' },
+    { name: '3 Sharing Space', price: '1,399' },
+    { name: '4 Sharing Space', price: '899' }
   ];
 
-  const inTexts = [
-    'Daily Gated Security & Caretaker Support',
-    'High-Speed Wi-Fi connectivity in rooms',
-    'RO purified & submersible drinking water',
-    'Room cleaning & daily common area sanitization',
-    'Locked secure cycle stand parking access'
+  const meals = [
+    { count: '55 Meals', price: '2,099' },
+    { count: '50 Meals', price: '1,999' },
+    { count: '40 Meals', price: '1,799' },
+    { count: '30 Meals', price: '1,499' },
+    { count: '20 Meals', price: '1,199' },
+    { count: '15 Meals', price: '999' }
   ];
 
   return (
-    <section id="pricing" className="py-24 bg-[#FFFDF9] text-[#1C1917] relative overflow-hidden">
+    <section id="pricing" className="py-24 bg-[#FAF8F5] text-[#1C1917] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         
         {/* Title */}
-        <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-          <span className="text-[10px] uppercase font-bold tracking-widest text-[#C58B97] block">Affordable Living</span>
-          <h2 className="text-3xl sm:text-4xl lg:text-4.5xl font-extrabold text-[#1B4332] font-serif">Comparison Brochure</h2>
-          <p className="font-bengali text-[#C26D55] text-xs font-semibold">আপনার প্রয়োজন অনুযায়ী সঠিক প্যাকেজ বেছে নিন</p>
+        <div className="text-center max-w-2xl mx-auto mb-20 space-y-3">
+          <span className="text-[10px] uppercase font-bold tracking-widest text-[#C26D55] font-sans block">05 / Investment</span>
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-[#1B4332] font-serif leading-none">Brochure & Rates</h2>
+          <p className="font-bengali text-[#C58B97] text-xs font-semibold">আপনার প্রয়োজন অনুযায়ী সাশ্রয়ী প্যাকেজ বেছে নিন</p>
         </div>
 
-        {/* Layout: Split-Panel comparison */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        {/* Double-Page Spread Layout */}
+        <div className="bg-[#FFFDF9] rounded-[3rem] border border-[#748E7A]/25 overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-[#748E7A]/20">
           
-          {/* Brochure Column 1: All Inclusive Package */}
-          <div className="lg:col-span-6 bg-[#FFFDF9] rounded-[2.5rem] p-8 border-2 border-[#1B4332]/85 shadow-lg relative flex flex-col justify-between group">
-            <div className="absolute top-0 right-8 -translate-y-1/2 bg-[#1B4332] text-[#F0A699] text-[9px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-md">
-              Most Value for Students
-            </div>
-
-            <div>
-              <div className="pb-6 border-b border-[#748E7A]/25">
-                <span className="text-[9px] uppercase font-bold text-[#C58B97] tracking-widest">Everything Covered</span>
-                <h3 className="text-2xl font-bold text-[#1B4332] font-serif mt-1">All-Inclusive Plan</h3>
-                <p className="text-xs text-[#382F2D]/85 leading-relaxed mt-2">Rent + Daily Homely Food + Electricity charges included.</p>
-              </div>
-
-              {/* Price list */}
-              <div className="py-6 space-y-3">
-                {allInclusivePlans.map((p, idx) => (
-                  <div key={idx} className="flex justify-between items-center py-2 px-3 hover:bg-[#FAF8F5] rounded-xl transition-colors">
-                    <span className="text-xs font-bold text-[#1C1917]/90">{p.sharing}</span>
-                    <span className="text-base font-bold text-[#1B4332] font-serif">₹{p.price} <span className="text-[9px] text-[#1C1917]/50 font-normal">/ mo</span></span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Features inclusions */}
-              <div className="pb-6 border-t border-[#748E7A]/15 pt-6 space-y-3">
-                <p className="text-[10px] uppercase font-extrabold tracking-widest text-[#1C1917]/50">Package Inclusions:</p>
-                {inTexts.map((txt, idx) => (
-                  <div key={idx} className="flex items-center space-x-2.5 text-xs text-[#1C1917]/90 font-sans">
-                    <Check size={14} className="text-[#1B4332] flex-shrink-0" />
-                    <span>{txt}</span>
-                  </div>
-                ))}
-                <div className="flex items-center space-x-2.5 text-xs text-[#1C1917]/90 font-sans font-bold">
-                  <Check size={14} className="text-[#1B4332] flex-shrink-0" />
-                  <span>3 Daily Fresh Bengali Meals (On-site Mess)</span>
+          {/* Page Left: All-Inclusive Catalog */}
+          <div className="p-8 sm:p-12 space-y-8 flex flex-col justify-between">
+            <div className="space-y-6">
+              <div className="flex items-center justify-between border-b border-[#748E7A]/20 pb-4">
+                <div>
+                  <span className="text-[9px] uppercase font-bold text-[#C58B97] tracking-widest block font-sans">Option 01</span>
+                  <h3 className="text-2xl font-bold text-[#1B4332] font-serif">All-Inclusive Student Package</h3>
+                </div>
+                <div className="bg-[#1B4332]/10 text-[#1B4332] px-3.5 py-1.5 rounded-full text-[9px] font-bold uppercase tracking-widest">
+                  Popular
                 </div>
               </div>
+
+              <p className="text-xs text-[#382F2D]/85 leading-relaxed font-sans">
+                Best value for university boarders. Includes Bed space, all healthy daily mess meals, and standard utility electricity.
+              </p>
+
+              {/* Price list styled like a high-end restaurant menu card */}
+              <div className="space-y-4 pt-2">
+                {allInclusive.map((p, idx) => (
+                  <div key={idx} className="flex justify-between items-end">
+                    <span className="text-xs font-bold text-[#1C1917]/95 font-sans leading-none">{p.name}</span>
+                    <div className="flex-1 border-b border-dotted border-[#748E7A]/35 mx-3 mb-1" />
+                    <span className="text-lg font-bold text-[#1B4332] font-serif leading-none">₹{p.price}/mo</span>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <a
-              href="#contact"
-              className="w-full text-center bg-[#1B4332] hover:bg-[#C26D55] text-whitePure py-4 rounded-full font-bold uppercase text-[9px] tracking-widest transition-colors shadow-md mt-4"
-            >
-              Book All-Inclusive Package
-            </a>
+            <div className="pt-8 border-t border-[#748E7A]/15 space-y-4">
+              <p className="text-[10px] uppercase font-extrabold text-[#1C1917]/50 tracking-widest">Inclusions:</p>
+              <div className="grid grid-cols-2 gap-2 text-[11px] text-[#1C1917]/90 font-sans">
+                <div className="flex items-center space-x-2"><CircleCheck size={12} className="text-[#1B4332]" /> <span>Daily Bengali Food</span></div>
+                <div className="flex items-center space-x-2"><CircleCheck size={12} className="text-[#1B4332]" /> <span>Emergency Light</span></div>
+                <div className="flex items-center space-x-2"><CircleCheck size={12} className="text-[#1B4332]" /> <span>Free Fiber WiFi</span></div>
+                <div className="flex items-center space-x-2"><CircleCheck size={12} className="text-[#1B4332]" /> <span>Washing & Cleaning</span></div>
+                <div className="flex items-center space-x-2"><CircleCheck size={12} className="text-[#1B4332]" /> <span>Geyser Water</span></div>
+                <div className="flex items-center space-x-2"><CircleCheck size={12} className="text-[#1B4332]" /> <span>Cycle Parking</span></div>
+              </div>
+            </div>
           </div>
 
-          {/* Brochure Column 2: Flexible Separate Plan */}
-          <div className="lg:col-span-6 bg-[#FAF8F5] rounded-[2.5rem] p-8 border border-[#748E7A]/25 flex flex-col justify-between">
-            <div>
-              <div className="pb-6 border-b border-[#748E7A]/25">
-                <span className="text-[9px] uppercase font-bold text-[#1C1917]/55 tracking-widest">Customizable Choice</span>
-                <h3 className="text-2xl font-bold text-[#1B4332] font-serif mt-1">Flexible Separate Plan</h3>
-                <p className="text-xs text-[#382F2D]/85 leading-relaxed mt-2">Perfect for boarders who cook or stay intermittently.</p>
+          {/* Page Right: Flexible Separate Catalog */}
+          <div className="p-8 sm:p-12 space-y-8 flex flex-col justify-between bg-[#FAF8F5]/35">
+            <div className="space-y-6">
+              <div className="flex items-center justify-between border-b border-[#748E7A]/20 pb-4">
+                <div>
+                  <span className="text-[9px] uppercase font-bold text-[#C58B97] tracking-widest block font-sans">Option 02</span>
+                  <h3 className="text-2xl font-bold text-[#1B4332] font-serif">Flexible Separate Plan</h3>
+                </div>
               </div>
+
+              <p className="text-xs text-[#382F2D]/85 leading-relaxed font-sans">
+                Pay only for bed space rent. Ideal for working candidates or independent cooking requirements.
+              </p>
 
               {/* Price list */}
-              <div className="py-6 space-y-3">
-                {flexiblePlans.map((p, idx) => (
-                  <div key={idx} className="flex justify-between items-center py-2 px-3 border-b border-[#748E7A]/15">
-                    <span className="text-xs font-semibold text-[#1C1917]/85">{p.sharing}</span>
-                    <span className="text-base font-bold text-[#1B4332] font-serif">₹{p.price} <span className="text-[9px] text-[#1C1917]/50 font-normal">/ mo</span></span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Extras board */}
-              <div className="p-4 bg-[#FFFDF9] rounded-2xl border border-[#748E7A]/25 space-y-2.5 mb-6">
-                <div className="flex items-center space-x-1.5 text-[9px] uppercase font-bold text-[#C26D55] tracking-widest">
-                  <Info size={11} />
-                  <span>Metered Bills & Addons</span>
-                </div>
-                <div className="flex justify-between text-xs font-bold text-[#1C1917]/90">
-                  <span>Electricity Consumption</span>
-                  <span className="text-[#1B4332]">₹10 Per Unit</span>
-                </div>
-                <div className="flex justify-between text-xs font-bold text-[#1C1917]/90">
-                  <span>Optional Kitchen Access</span>
-                  <span className="text-[#1B4332]">₹599 / month</span>
-                </div>
-              </div>
-
-              {/* Inclusions */}
-              <div className="pb-6 space-y-3">
-                <p className="text-[10px] uppercase font-extrabold tracking-widest text-[#1C1917]/55">Included Amenities:</p>
-                {inTexts.map((txt, idx) => (
-                  <div key={idx} className="flex items-center space-x-2.5 text-xs text-[#1C1917]/85">
-                    <Check size={14} className="text-[#748E7A] flex-shrink-0" />
-                    <span>{txt}</span>
+              <div className="space-y-4 pt-2">
+                {flexible.map((p, idx) => (
+                  <div key={idx} className="flex justify-between items-end">
+                    <span className="text-xs font-bold text-[#1C1917]/95 font-sans leading-none">{p.name}</span>
+                    <div className="flex-1 border-b border-dotted border-[#748E7A]/35 mx-3 mb-1" />
+                    <span className="text-lg font-bold text-[#1B4332] font-serif leading-none">₹{p.price}/mo</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <a
-              href="#contact"
-              className="w-full text-center bg-[#FFFDF9] hover:bg-[#1B4332] hover:text-whitePure text-[#1C1917] py-4 rounded-full font-bold uppercase text-[9px] tracking-widest transition-all border border-[#748E7A]/60 mt-4"
-            >
-              Choose Flexible Plan
-            </a>
+            {/* Utility and Addon tables */}
+            <div className="pt-6 border-t border-[#748E7A]/15 space-y-4">
+              <div className="flex items-center space-x-2 text-[10px] uppercase font-extrabold text-[#C26D55] tracking-widest">
+                <AlertCircle size={12} />
+                <span>Separate Addons</span>
+              </div>
+              <div className="grid grid-cols-2 gap-4 text-xs font-sans">
+                <div className="bg-[#FAF8F5] p-3.5 rounded-xl border border-[#748E7A]/20">
+                  <span className="text-[9px] uppercase font-bold text-[#1C1917]/50 block">Electricity</span>
+                  <span className="text-sm font-bold text-[#1B4332] block mt-1">₹10 / Unit</span>
+                </div>
+                <div className="bg-[#FAF8F5] p-3.5 rounded-xl border border-[#748E7A]/20">
+                  <span className="text-[9px] uppercase font-bold text-[#1C1917]/50 block">Kitchen access</span>
+                  <span className="text-sm font-bold text-[#1B4332] block mt-1">₹599 / Mo</span>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
+
+        {/* Meal Plans Strip Layout */}
+        <div className="mt-12 bg-[#FFFDF9] rounded-[2.5rem] p-8 border border-[#748E7A]/25 text-left space-y-6">
+          <div className="space-y-1 max-w-xl">
+            <span className="text-[9px] uppercase font-bold text-[#C58B97] tracking-widest block font-sans">Addon Tokens</span>
+            <h4 className="text-xl font-bold text-[#1B4332] font-serif">Daily Mess Meal Packages</h4>
+            <p className="text-xs text-[#382F2D]/80 font-sans leading-relaxed">
+              Order customized lunch and dinner token packages if you choose the Flexible Plan. Cooked fresh daily.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 pt-2">
+            {meals.map((m, idx) => (
+              <div key={idx} className="bg-[#FAF8F5] p-4 rounded-2xl border border-[#748E7A]/15 text-center">
+                <span className="text-[10px] uppercase font-bold text-[#1C1917]/55 block font-sans">{m.count}</span>
+                <span className="text-lg font-bold text-[#1B4332] font-serif block mt-1">₹{m.price}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );

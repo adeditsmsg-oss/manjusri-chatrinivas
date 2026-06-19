@@ -2,10 +2,10 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "কনক মেস কাম পেয়িং গেস্ট | Kanak Mess Cum Paying Guest in Saratpally, Midnapore",
-  description: "Kanak Mess Cum Paying Guest (কনক মেস কাম পেয়িং গেস্ট) provides comfortable marble floor rooms and a consistent daily mess in Saratpally, Midnapore. Admission open for 2026 session.",
-  keywords: ["Kanak Mess", "Paying Guest Midnapore", "Saratpally hostel", "Student Mess Midnapore", "Kanak PG"],
-  authors: [{ name: "Kanak Mess Management" }],
+  title: "মঞ্জুশ্রী ছাত্রীনিবাস | Manjusri Chatrinivas (Ladies Mess) Midnapore",
+  description: "Manjusri Chatrinivas (মঞ্জুশ্রী ছাত্রীনিবাস) is a premium ladies hostel, girls PG, and student accommodation in Ramayanpara, near Bidla Traffic Point, Tantigeria, Midnapore. Safe environment, daily homely mess, and modern amenities.",
+  keywords: ["Ladies Hostel Midnapore", "Girls PG Midnapore", "Manjusri Chatrinivas", "Ladies Mess Midnapore", "Student Hostel Midnapore", "Girls PG Tantigeria"],
+  authors: [{ name: "Manjusri Chatrinivas Management" }],
 };
 
 export const viewport: Viewport = {
