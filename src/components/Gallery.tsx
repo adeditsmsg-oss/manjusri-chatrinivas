@@ -6,12 +6,12 @@ import { X, Maximize2 } from 'lucide-react';
 
 export default function Gallery() {
   const images = [
-    { title: 'The Gated Campus', url: '/images/building.jpg', ratio: 'col-span-12 md:col-span-8 aspect-video' },
-    { title: 'Orange Room Single Config', url: '/images/bedroom_orange.jpg', ratio: 'col-span-6 md:col-span-4 aspect-square' },
-    { title: 'Western Sanitation Setup', url: '/images/bathroom.jpg', ratio: 'col-span-6 md:col-span-4 aspect-[3/4]' },
-    { title: 'Homely Dining Hall', url: '/images/dining.jpg', ratio: 'col-span-12 md:col-span-8 aspect-video' },
-    { title: 'Fresh Sanitized Kitchen', url: '/images/kitchen.jpg', ratio: 'col-span-12 md:col-span-6 aspect-video' },
-    { title: 'Common Balcony Sight', url: '/images/balcony.jpg', ratio: 'col-span-12 md:col-span-6 aspect-video' }
+    { title: 'The Gated Campus', url: '/manjusri-chatrinivas/images/building.jpg', ratio: 'col-span-12 md:col-span-8 aspect-video' },
+    { title: 'Orange Room Single Config', url: '/manjusri-chatrinivas/images/bedroom_orange.jpg', ratio: 'col-span-6 md:col-span-4 aspect-square' },
+    { title: 'Western Sanitation Setup', url: '/manjusri-chatrinivas/images/bathroom.jpg', ratio: 'col-span-6 md:col-span-4 aspect-[3/4]' },
+    { title: 'Homely Dining Hall', url: '/manjusri-chatrinivas/images/dining.jpg', ratio: 'col-span-12 md:col-span-8 aspect-video' },
+    { title: 'Fresh Sanitized Kitchen', url: '/manjusri-chatrinivas/images/kitchen.jpg', ratio: 'col-span-12 md:col-span-6 aspect-video' },
+    { title: 'Common Balcony Sight', url: '/manjusri-chatrinivas/images/balcony.jpg', ratio: 'col-span-12 md:col-span-6 aspect-video' }
   ];
 
   const [activeImg, setActiveImg] = useState<string | null>(null);

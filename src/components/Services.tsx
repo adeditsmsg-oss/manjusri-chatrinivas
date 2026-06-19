@@ -12,7 +12,7 @@ export default function Services() {
       banglaName: 'সিঙ্গেল বেডরুম (সম্পূর্ণ প্রাইভেসি)',
       price: '₹2,299',
       desc: 'Ideal for working women and senior students seeking absolute privacy and uninterrupted study hours. Features individual wardrobe, study desk, and excellent ventilation.',
-      image: '/images/bedroom_orange.jpg',
+      image: '/manjusri-chatrinivas/images/bedroom_orange.jpg',
       alignLeft: true
     },
     {
@@ -21,7 +21,7 @@ export default function Services() {
       banglaName: 'ডাবল বেডরুম (জনপ্রিয় ডাবল)',
       price: '₹1,599',
       desc: 'Our most popular sharing configuration, offering balanced privacy, spacious layouts, and shared wardrobes. Perfect for close friends and classmates.',
-      image: '/images/bedroom_blue.jpg',
+      image: '/manjusri-chatrinivas/images/bedroom_blue.jpg',
       alignLeft: false
     },
     {
@@ -30,7 +30,7 @@ export default function Services() {
       banglaName: 'ট্রিপল বেডরুম (সাশ্রয়ী ট্রিপল)',
       price: '₹1,399',
       desc: '经济-friendly student-centric rooms featuring three separate beds, individual study desks, and plenty of lighting for collective studies.',
-      image: '/images/bedroom_yellow.jpg',
+      image: '/manjusri-chatrinivas/images/bedroom_yellow.jpg',
       alignLeft: true
     },
     {
@@ -39,7 +39,7 @@ export default function Services() {
       banglaName: 'ফোর বেডরুম (সর্বোচ্চ সাশ্রয়)',
       price: '₹899',
       desc: 'Highly budget-friendly option providing comfortable beds, separate lockers, study tables, and regular common area sanitization.',
-      image: '/images/bedroom_green.jpg',
+      image: '/manjusri-chatrinivas/images/bedroom_green.jpg',
       alignLeft: false
     }
   ];

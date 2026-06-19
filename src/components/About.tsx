@@ -49,7 +49,7 @@ export default function About() {
         {/* Dynamic Image Collage (Editorial-style Wide Strip) */}
         <div className="relative w-full h-[220px] sm:h-[320px] rounded-[2.5rem] overflow-hidden shadow-xl mt-12">
           <Image
-            src="/images/lobby.jpg"
+            src="/manjusri-chatrinivas/images/lobby.jpg"
             alt="Interior clean corridor"
             fill
             className="object-cover"

@@ -58,19 +58,35 @@ export default function Hero() {
 
         {/* Large Vertical Cover Image Frame */}
         <div className="lg:col-span-6 flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-[400px] aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-2xl border-[12px] border-[#FFFDF9] bg-[#FAF8F5]">
+          {/* Main building display frame */}
+          <div className="w-full h-full rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-[#FFFDF9] relative transform hover:rotate-0 transition-transform duration-500">
             <Image
-              src="/images/building.jpg"
-              alt="Manjusri Chatrinivas Editorial cover"
+              src="/manjusri-chatrinivas/images/building.jpg"
+              alt="Manjusri Chatrinivas Gated Property"
               fill
               priority
               className="object-cover"
             />
-            {/* Soft overlay gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1B4332]/40 via-transparent to-transparent" />
-            <div className="absolute bottom-6 right-6 text-whitePure text-right font-serif">
-              <span className="text-[8px] uppercase font-bold tracking-widest text-[#F0A699] font-sans block">Ramayanpara Gated Campus</span>
-              <span className="text-sm font-semibold">Tantigeria Town</span>
+            
+            {/* Visual Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1B4332]/70 via-transparent to-transparent" />
+            
+            {/* Floating labels */}
+            <div className="absolute bottom-8 left-8 right-8 text-whitePure text-left">
+              <p className="text-[10px] uppercase font-bold tracking-widest text-[#F0A699]">Luxury Ladies PG</p>
+              <h3 className="text-2xl font-bold mt-1.5 text-whitePure font-serif">Ramayanpara Property</h3>
+            </div>
+          </div>
+
+          {/* Overlapping cozy room badge at the bottom-left */}
+          <div className="absolute -bottom-6 -left-10 bg-[#FFFDF9] p-3.5 rounded-2xl shadow-xl border border-[#E5E0D8] flex items-center space-x-3.5 max-w-[200px] transform rotate-3 hover:scale-105 transition-transform duration-300">
+            <div className="w-12 h-12 rounded-xl overflow-hidden relative flex-shrink-0">
+              <Image
+                src="/manjusri-chatrinivas/images/bedroom_orange.jpg"
+                alt="Premium Interiors"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
