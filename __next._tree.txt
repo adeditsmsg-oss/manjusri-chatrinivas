@@ -1,0 +1,2 @@
+:HL["/manjusri-chatrinivas/_next/static/chunks/3f2rrham8hs7l.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"vP6gAAhRRkVm0v_FxjjUt"}
