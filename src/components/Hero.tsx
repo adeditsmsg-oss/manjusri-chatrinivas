@@ -5,7 +5,7 @@ import { TulipLeft, TulipRight } from './FlowerAccent';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen bg-[#FAF8F5] flex items-center justify-center overflow-hidden py-12">
+    <section id="home" className="relative min-h-screen bg-[#FAF8F5] flex items-center justify-center overflow-hidden pt-28 pb-12 sm:pt-36 sm:pb-16 lg:pt-40 lg:pb-24">
       {/* Editorial flower accents */}
       <TulipLeft />
       <TulipRight />
@@ -19,7 +19,7 @@ export default function Hero() {
             <span className="text-lg sm:text-xl font-serif text-[#C58B97] italic block font-bengali">নিরাপদ আবাসন, ঘরোয়া পরিবেশের নিশ্চয়তা</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5.5xl lg:text-6.5xl font-extrabold text-[#1B4332] font-serif leading-[1.25] tracking-tight">
+          <h1 className="text-4xl sm:text-5.5xl lg:text-6.5xl font-extrabold text-[#1B4332] font-serif leading-[1.35] tracking-tight">
             মঞ্জুশ্রী <br />
             ছাত্রীনিবাস
           </h1>
@@ -58,7 +58,7 @@ export default function Hero() {
         {/* Large Vertical Cover Image Frame */}
         <div className="lg:col-span-6 flex justify-center lg:justify-end relative">
           {/* Main building display frame with restricted aspect-ratio and size */}
-          <div className="relative max-w-[280px] sm:max-w-xs md:max-w-sm w-full aspect-[3/4.2] rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] sm:border-[12px] border-[#FFFDF9] transform hover:rotate-0 transition-transform duration-500">
+          <div className="relative max-w-[210px] sm:max-w-[230px] md:max-w-[250px] w-full aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl border-[6px] sm:border-[8px] border-[#FFFDF9] transform hover:rotate-0 transition-transform duration-500">
             <img
               src="/manjusri-chatrinivas/images/building.jpg"
               alt="Manjusri Chatrinivas Gated Property"
@@ -69,14 +69,14 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#1B4332]/70 via-transparent to-transparent" />
             
             {/* Floating labels */}
-            <div className="absolute bottom-6 left-6 right-6 text-whitePure text-left">
-              <p className="text-[9px] uppercase font-bold tracking-widest text-[#F0A699]">Luxury Ladies PG</p>
-              <h3 className="text-xl font-bold mt-1 text-whitePure font-serif">Ramayanpara Property</h3>
+            <div className="absolute bottom-5 left-5 right-5 text-whitePure text-left">
+              <p className="text-[8px] uppercase font-bold tracking-widest text-[#F0A699]">Luxury Ladies PG</p>
+              <h3 className="text-lg font-bold mt-0.5 text-whitePure font-serif">Ramayanpara Property</h3>
             </div>
 
             {/* Overlapping cozy room badge aligned relative to the building card */}
-            <div className="absolute -bottom-4 -left-6 bg-[#FFFDF9] p-2.5 rounded-2xl shadow-xl border border-[#E5E0D8] flex items-center space-x-2.5 max-w-[140px] transform rotate-3 hover:scale-105 transition-transform duration-300 z-20">
-              <div className="w-10 h-10 rounded-xl overflow-hidden relative flex-shrink-0">
+            <div className="absolute -bottom-3 -left-4 bg-[#FFFDF9] p-2 rounded-xl shadow-xl border border-[#E5E0D8] flex items-center space-x-2 max-w-[120px] transform rotate-3 hover:scale-105 transition-transform duration-300 z-20">
+              <div className="w-8 h-8 rounded-lg overflow-hidden relative flex-shrink-0">
                 <img
                   src="/manjusri-chatrinivas/images/bedroom_orange.jpg"
                   alt="Premium Interiors"
