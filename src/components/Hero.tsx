@@ -16,10 +16,10 @@ export default function Hero() {
         <div className="lg:col-span-6 text-left space-y-6 sm:space-y-8 animate-fadeIn">
           <div className="space-y-2">
             <span className="text-[10px] font-bold uppercase tracking-widest text-[#C26D55] font-sans block">Volume I — Midnapore</span>
-            <span className="text-xl sm:text-2xl font-serif text-[#C58B97] italic block font-bengali">নিরাপদ আবাসন, ঘরোয়া পরিবেশের নিশ্চয়তা</span>
+            <span className="text-lg sm:text-xl font-serif text-[#C58B97] italic block font-bengali">নিরাপদ আবাসন, ঘরোয়া পরিবেশের নিশ্চয়তা</span>
           </div>
 
-          <h1 className="text-5xl sm:text-6.5xl lg:text-7.5xl font-extrabold text-[#1B4332] font-serif leading-[1.05] tracking-tight">
+          <h1 className="text-4xl sm:text-5.5xl lg:text-6.5xl font-extrabold text-[#1B4332] font-serif leading-[1.25] tracking-tight">
             মঞ্জুশ্রী <br />
             ছাত্রীনিবাস
           </h1>
@@ -56,9 +56,9 @@ export default function Hero() {
         </div>
 
         {/* Large Vertical Cover Image Frame */}
-        <div className="lg:col-span-6 flex justify-center lg:justify-end">
-          {/* Main building display frame */}
-          <div className="w-full h-full rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-[#FFFDF9] relative transform hover:rotate-0 transition-transform duration-500">
+        <div className="lg:col-span-6 flex justify-center lg:justify-end relative">
+          {/* Main building display frame with restricted aspect-ratio and size */}
+          <div className="relative max-w-[280px] sm:max-w-xs md:max-w-sm w-full aspect-[3/4.2] rounded-[2.5rem] overflow-hidden shadow-2xl border-[8px] sm:border-[12px] border-[#FFFDF9] transform hover:rotate-0 transition-transform duration-500">
             <img
               src="/manjusri-chatrinivas/images/building.jpg"
               alt="Manjusri Chatrinivas Gated Property"
@@ -69,20 +69,20 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#1B4332]/70 via-transparent to-transparent" />
             
             {/* Floating labels */}
-            <div className="absolute bottom-8 left-8 right-8 text-whitePure text-left">
-              <p className="text-[10px] uppercase font-bold tracking-widest text-[#F0A699]">Luxury Ladies PG</p>
-              <h3 className="text-2xl font-bold mt-1.5 text-whitePure font-serif">Ramayanpara Property</h3>
+            <div className="absolute bottom-6 left-6 right-6 text-whitePure text-left">
+              <p className="text-[9px] uppercase font-bold tracking-widest text-[#F0A699]">Luxury Ladies PG</p>
+              <h3 className="text-xl font-bold mt-1 text-whitePure font-serif">Ramayanpara Property</h3>
             </div>
-          </div>
 
-          {/* Overlapping cozy room badge at the bottom-left */}
-          <div className="absolute -bottom-6 -left-10 bg-[#FFFDF9] p-3.5 rounded-2xl shadow-xl border border-[#E5E0D8] flex items-center space-x-3.5 max-w-[200px] transform rotate-3 hover:scale-105 transition-transform duration-300">
-            <div className="w-12 h-12 rounded-xl overflow-hidden relative flex-shrink-0">
-              <img
-                src="/manjusri-chatrinivas/images/bedroom_orange.jpg"
-                alt="Premium Interiors"
-                className="w-full h-full object-cover"
-              />
+            {/* Overlapping cozy room badge aligned relative to the building card */}
+            <div className="absolute -bottom-4 -left-6 bg-[#FFFDF9] p-2.5 rounded-2xl shadow-xl border border-[#E5E0D8] flex items-center space-x-2.5 max-w-[140px] transform rotate-3 hover:scale-105 transition-transform duration-300 z-20">
+              <div className="w-10 h-10 rounded-xl overflow-hidden relative flex-shrink-0">
+                <img
+                  src="/manjusri-chatrinivas/images/bedroom_orange.jpg"
+                  alt="Premium Interiors"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
