@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primaryGreen: #1B4332;   /* Deep Forest Green */
+  --color-accentRose: #E27D60;     /* Soft Terracotta / Rose Accent */
+  --color-accentPink: #C97A7E;     /* Pink Tulip Accent */
+  --color-creamBg: #F9F6F0;        /* Soft Alabaster Background */
+  --color-creamCard: #F4EFE6;      /* Off-white warm card background */
+  --color-charcoalText: #2F3E46;   /* Dark Charcoal Slate text */
+  --color-goldBrand: #D4A373;      /* Shimmering Golden Amber */
+  --color-whitePure: #FFFFFF;
+  --color-greyBorder: #E5E0D8;
+  
+  --font-sans: 'Outfit', sans-serif;
+  --font-serif: 'Lora', serif;
+  --font-bengali: 'Hind Siliguri', sans-serif;
+}
+
+:root {
+  --background: #F9F6F0;
+  --foreground: #2F3E46;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif;
+}
+
+/* Custom floral pattern backdrop overlay */
+.floral-backdrop {
+  background-image: radial-gradient(circle at 1px 1px, rgba(27, 67, 50, 0.03) 1.5px, transparent 0);
+  background-size: 32px 32px;
+}
+
+/* Custom premium scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F9F6F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #1B4332;
+  border: 2px solid #F9F6F0;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2D6A4F;
+}
+
+/* Soft glassmorphism panel */
+.glass-capsule {
+  background: rgba(249, 246, 240, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(27, 67, 50, 0.08);
+}
