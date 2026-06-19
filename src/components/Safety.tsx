@@ -1,78 +1,82 @@
 'use client';
 
 import React from 'react';
-import { ShieldAlert, MapPin, Award, Heart, CheckCircle2, Users } from 'lucide-react';
-import { RoseCornerLeft, RoseCornerRight } from './FlowerAccent';
+import Image from 'next/image';
 
 export default function Safety() {
-  const points = [
-    {
-      title: 'Outside CCTV coverage',
-      desc: 'All main gates and boundaries are under continuous video monitoring for absolute safety.',
-      icon: ShieldAlert
-    },
-    {
-      title: 'Safe Gated Locality',
-      desc: 'Ramayanpara near Bidla Traffic Point is one of the most reliable and peaceful locations in Midnapore.',
-      icon: MapPin
-    },
-    {
-      title: 'Responsible Management',
-      desc: 'Dedicated supervisor resides close to the premises to assist girls with any daily concerns or emergencies.',
-      icon: Award
-    },
-    {
-      title: '100% Women-Friendly PG',
-      desc: 'Strict guest protocols and a gated perimeter ensure comfortable, worry-free accommodation.',
-      icon: Heart
-    },
-    {
-      title: 'Clean Modern Washrooms',
-      desc: 'Sanitary fixtures cleaned daily to ensure a hygienic environment for all boarders.',
-      icon: CheckCircle2
-    },
-    {
-      title: 'Peaceful Student Community',
-      desc: 'Ideal atmosphere for high focus, enabling students and job seekers to study without distractions.',
-      icon: Users
-    }
+  const trustFeatures = [
+    { title: 'Outside CCTV Safety', desc: 'All entrance gates and pathways are under 24/7 security surveillance.' },
+    { title: 'Parent-Approved Locality', desc: 'Situated in Ramayanpara, near Bidla Traffic Point, which is safe and quiet.' },
+    { title: 'Women-Friendly Environment', desc: 'Strict verification policies and residence helper available to support boarders.' }
   ];
 
   return (
-    <section id="safety" className="py-24 bg-creamCard relative overflow-hidden">
-      {/* Decorative rose corners */}
-      <RoseCornerLeft />
-      <RoseCornerRight />
+    <section id="safety" className="py-24 bg-[#FAF8F5] text-[#1C1917] relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          
+          {/* Left Column: Replicating reference image text layout */}
+          <div className="lg:col-span-6 text-left space-y-8">
+            <div className="space-y-4">
+              <span className="text-[10px] uppercase font-bold tracking-widest text-[#C58B97] block">Gated Community</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-4.5xl font-extrabold text-[#1B4332] font-serif leading-tight">
+                Safe, Friendly & <br />
+                Perfect Ladies Living
+              </h2>
+              <p className="text-sm text-[#382F2D]/90 leading-relaxed font-sans">
+                Manjusri Chatrinivas is dedicated to keeping your daughter safe while fostering a homely, productive academic environment. Our gated property offers maximum reassurance for parents.
+              </p>
+            </div>
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
-        
-        {/* Title */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-sm font-bold uppercase tracking-widest text-accentRose font-bengali block">নিরাপত্তা ও অভিভাবকের আস্থা (Safety Section)</span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-primaryGreen mt-2 font-serif">Parents Trust Us for Genuinely Safe Living</h2>
-          <p className="text-darkBrown/80 mt-4 leading-relaxed text-sm sm:text-base font-sans">
-            We understand that safety is the top priority for families. Manjusri Chatrinivas is designed with multiple security systems to provide ultimate peace of mind.
-          </p>
-        </div>
-
-        {/* Safety Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {points.map((p, idx) => (
-            <div
-              key={idx}
-              className="bg-whitePure p-6 sm:p-8 rounded-3xl border border-greyBorder/55 hover:border-accentOrange hover:shadow-md transition-all duration-300 text-left flex flex-col justify-between"
-            >
-              <div className="space-y-4">
-                <div className="p-3 bg-accentOrange/10 text-accentOrange rounded-xl w-fit">
-                  <p.icon size={22} />
+            {/* In-text feature points */}
+            <div className="space-y-5 pt-2">
+              {trustFeatures.map((feat, idx) => (
+                <div key={idx} className="border-l-2 border-[#C26D55] pl-4 space-y-1">
+                  <h4 className="text-sm font-bold text-[#1B4332] font-serif">{feat.title}</h4>
+                  <p className="text-xs text-[#382F2D]/85 leading-relaxed font-sans">{feat.desc}</p>
                 </div>
-                <h3 className="font-bold text-primaryGreen text-base font-serif">{p.title}</h3>
-                <p className="text-xs text-charcoalText/80 leading-relaxed font-sans">{p.desc}</p>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Column: Replicating the two side-by-side vertical cards layout at the bottom of the reference image */}
+          <div className="lg:col-span-6 grid grid-cols-2 gap-6 items-stretch">
+            
+            {/* Card 1: Balcony view */}
+            <div className="bg-[#FFFDF9] rounded-[2rem] overflow-hidden border border-[#748E7A]/25 p-4 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
+              <div className="aspect-[4/5] rounded-[1.5rem] overflow-hidden relative mb-4">
+                <Image
+                  src="/images/balcony.jpg"
+                  alt="Cozy Balcony space"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="text-left px-1">
+                <h4 className="text-sm font-bold text-[#1B4332] font-serif">Quiet Balconies</h4>
+                <p className="text-[10px] text-[#382F2D]/75 leading-relaxed font-sans mt-1">Scenic field views for studying or relaxation.</p>
               </div>
             </div>
-          ))}
-        </div>
 
+            {/* Card 2: Bathroom view */}
+            <div className="bg-[#FFFDF9] rounded-[2rem] overflow-hidden border border-[#748E7A]/25 p-4 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300">
+              <div className="aspect-[4/5] rounded-[1.5rem] overflow-hidden relative mb-4">
+                <Image
+                  src="/images/bathroom.jpg"
+                  alt="Hygienic Modern Washroom"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="text-left px-1">
+                <h4 className="text-sm font-bold text-[#1B4332] font-serif">Sanitized Washrooms</h4>
+                <p className="text-[10px] text-[#382F2D]/75 leading-relaxed font-sans mt-1">Clean western fixtures sanitized daily.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
       </div>
     </section>
   );
